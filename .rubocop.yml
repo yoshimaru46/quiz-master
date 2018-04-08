@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - vendor/**/*
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Mettics/BlockLength:
+  Exclude:
+    - spec/**/*
+    - config/**/*
