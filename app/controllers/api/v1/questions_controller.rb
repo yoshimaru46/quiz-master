@@ -24,7 +24,7 @@ module Api
         if @question.save
           render json: @question, status: :created, location: api_v1_question_url(@question)
         else
-          render json: @question.errors, status: :unprocessable_entity
+          render_error_message(model: @question, status: :unprocessable_entity)
         end
       end
 
@@ -33,7 +33,7 @@ module Api
         if @question.update(question_params)
           render json: @question
         else
-          render json: @question.errors, status: :unprocessable_entity
+          render_error_message(model: @question, status: :unprocessable_entity)
         end
       end
 
