@@ -24,6 +24,11 @@ PreCommit:
   AuthorName:
     enabled: false
 
+ESLint:
+    enabled: true
+    required_executable: 'npm'
+    command: ['npm', 'run', 'lint']
+
 #  TrailingWhitespace:
 #    enabled: true
 #    exclude:
