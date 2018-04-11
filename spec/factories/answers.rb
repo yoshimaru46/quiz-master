@@ -3,6 +3,6 @@
 FactoryBot.define do
   factory :answer do
     content { generate(:sentence) }
-    correct { false }
+    correct false
   end
 end
