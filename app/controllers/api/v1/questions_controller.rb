@@ -7,7 +7,7 @@ module Api
 
       # GET /questions
       def index
-        @questions = Question.all
+        @questions = Question.order('created_at DESC')
 
         render json: @questions
       end
@@ -39,7 +39,11 @@ module Api
 
       # DELETE /questions/1
       def destroy
-        @question.destroy
+        if @question.destroy
+          render json: @question
+        else
+          render_error_message(model: @question, status: :unprocessable_entity)
+        end
       end
 
       private
