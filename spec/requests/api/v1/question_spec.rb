@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Api::V1::Question, type: :request do
+RSpec.describe 'Api::V1::Question', type: :request do
   describe 'GET /api/v1/questions' do
     context 'when some resource' do
       let!(:question1) { create(:question) }
