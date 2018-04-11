@@ -13,8 +13,8 @@ RSpec.describe Api::V1::Question, type: :request do
       it 'returns questions' do
         subject
         expect(json.count).to eq 2
-        expect(json[0]['content']).to eq question1.content
-        expect(json[1]['content']).to eq question2.content
+        expect(json[0]['content']).to eq question2.content
+        expect(json[1]['content']).to eq question1.content
       end
     end
 
@@ -114,6 +114,35 @@ RSpec.describe Api::V1::Question, type: :request do
       it 'returns validate error message' do
         subject
         expect(json['message'][0]).to eq "Content can't be blank"
+      end
+
+      it { expect { subject }.not_to change(Question, :count) }
+    end
+  end
+
+  describe 'DELETE /api/v1/questions/:id' do
+    let(:question) { create(:question) }
+    let!(:id) { question.id }
+
+    context 'when destroy success' do
+      it { is_expected.to eq 200 }
+
+      it 'returns questions' do
+        subject
+        expect(json['content']).to eq question.content
+      end
+
+      it { expect { subject }.to change(Question, :count).by(-1) }
+    end
+
+    context 'when record not found' do
+      let(:id) { 'not-found' }
+
+      it { is_expected.to eq 404 }
+
+      it 'returns empty array' do
+        subject
+        expect(json['message']).to eq 'Record not found'
       end
 
       it { expect { subject }.not_to change(Question, :count) }
