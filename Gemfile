@@ -16,6 +16,8 @@ gem 'puma', '~> 3.7'
 
 gem 'active_model_serializers'
 
+gem 'numbers_and_words'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
