@@ -49,7 +49,12 @@ module Api
       private
 
       def set_question
-        @question = Question.find(params[:id])
+        id = params[:id]
+        @question = if 'sample'.eql? id
+                      Question.all.sample
+                    else
+                      Question.find(id)
+                    end
       end
 
       def question_params
