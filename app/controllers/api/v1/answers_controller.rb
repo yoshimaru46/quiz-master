@@ -6,18 +6,18 @@ module Api
       before_action :set_question, only: %i[index create]
       before_action :set_answer, only: %i[show]
 
-      # GET /questions/:id/answers
+      # GET /questions/:question_id/answers
       def index
         @answers = @question.answers
         render json: @answers
       end
 
-      # GET /questions/:question_id/answers/:id
+      # GET /answers/:id
       def show
         render json: @answer
       end
 
-      # POST /answers
+      # POST /questions/:question_id/answers
       def create
         @answer = @question.answers.build(answer_params)
 
