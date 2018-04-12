@@ -4,7 +4,7 @@ puts 'Start inserting seed "questions" ...'
   question = Question.create(
     {
       content: Faker::Lorem.sentence,
-      answer: Faker::Lorem.sentence
+      answer_content: Faker::Lorem.sentence
     }
   )
 

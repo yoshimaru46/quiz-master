@@ -4,6 +4,6 @@ class QuestionSerializer < ActiveModel::Serializer
   attributes %i[
     id
     content
-    answer
+    answer_content
   ]
 end

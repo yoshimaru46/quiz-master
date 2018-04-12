@@ -12,6 +12,6 @@ RSpec.describe QuestionSerializer, type: :serializer do
   it 'returns serialized data' do
     expect(subject['id']).to eq(question.id)
     expect(subject['content']).to eq(question.content)
-    expect(subject['answer']).to eq(question.answer)
+    expect(subject['answer_content']).to eq(question.answer_content)
   end
 end
