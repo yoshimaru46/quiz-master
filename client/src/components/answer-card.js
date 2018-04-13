@@ -15,10 +15,10 @@ export default function AnswerCard({question, answer}) {
                 </Card.Header>
                 <hr/>
                 <Card.Description>
-                    <Message color='green'>Your Answer</Message>
+                    <Message color='blue'>Your Answer</Message>
                     <h3>{answer.content}</h3>
                     <hr/>
-                    <Message color='blue'>Correct Answer</Message>
+                    <Message color='green'>Correct Answer</Message>
                     <h3>{question.answer_content}</h3>
                     <hr/>
                     <Message color='violet'>Result</Message>
