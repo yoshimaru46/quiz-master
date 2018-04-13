@@ -17,15 +17,18 @@ This is Simple Quiz App with Rails & React
 
 2. Setup your environment.
 
+    `% cd quiz-master` 
     `% bin/setup`
 
 2. Install modules
 
+    `% cd client`
     `% npm install`
 
 3. Start Foreman.
 
-    `% foreman start`
+    `% cd ..`
+    `% bundle exec foreman start`
 
 4. Verify that the app is up and running.
 
