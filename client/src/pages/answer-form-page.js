@@ -41,7 +41,8 @@ class AnswerFormPage extends Component {
                         <Redirect to={`/answers/${this.props.answer.id}`}/> :
                         <Grid centered columns={2}>
                             <Grid.Column>
-                                <h1 style={{marginTop:"1em", textAlign:"center"}}>Question No.{this.props.question.id}</h1>
+                                <h1 style={{marginTop: "1em", textAlign: "center"}}>
+                                    Question No.{this.props.question.id}</h1>
                                 <Button basic color="green" onClick={() => window.location.reload()}>Refresh</Button>
                                 <QuestionCard
                                     key={this.props.question.id}
@@ -50,7 +51,7 @@ class AnswerFormPage extends Component {
                                 <AnswerForm
                                     loading={this.props.loading}
                                     onSubmit={this.submit}
-                                    initialValues={{ question_id: `${this.props.question.id}`}}
+                                    initialValues={{question_id: `${this.props.question.id}`}}
                                     enableReinitialize={true}
                                 />
                             </Grid.Column>
