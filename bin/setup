@@ -28,7 +28,7 @@ chdir APP_ROOT do
   system! 'bin/rails db:setup'
 
   puts "\n== Add seed data =="
-  system! 'bin/rails db:seed:question'
+  system! 'bin/rails db:seed:questions'
 
   puts "\n== Removing old logs and tempfiles =="
   system! 'bin/rails log:clear tmp:clear'
