@@ -22,7 +22,9 @@ export default function AnswerCard({question, answer}) {
                     <h3>{question.answer_content}</h3>
                     <hr/>
                     <Message color='violet'>Result</Message>
-                    <b>{answer.correct ? <Icon size='massive' color='blue' name='circle outline'/> : <Icon size='massive' color='pink' name='close'/>}</b>
+                    <div style={{textAlign: "center"}}>
+                        {answer.correct ? <Icon size='massive' color='blue' name='circle outline'/> : <Icon size='massive' color='pink' name='close'/>}
+                    </div>
                 </Card.Description>
             </Card.Content>
         </Card>

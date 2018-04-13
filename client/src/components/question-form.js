@@ -51,7 +51,9 @@ class QuestionForm extends Component {
                     <Form onSubmit={handleSubmit} loading={loading}>
                         <Field name="content" type="text" component={this.renderTextAreaField} label="Content"/>
                         <Field name="answer_content" type="text" component={this.renderField} label="Answer"/>
-                        <Button primary type='submit' disabled={pristine || submitting}>Save</Button>
+                        <div style={{textAlign: "center"}}>
+                            <Button primary size='massive' type='submit' disabled={pristine || submitting}>Save</Button>
+                        </div>
                     </Form>
                 </Grid.Column>
             </Grid>

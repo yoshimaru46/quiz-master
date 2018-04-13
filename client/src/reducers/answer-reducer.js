@@ -38,7 +38,7 @@ export default (state=defaultState, action={}) => {
         case 'SAVE_ANSWER_FULFILLED': {
             return {
                 ...state,
-                answers: [...state.answers, action.payload.data],
+                answer: action.payload.data,
                 errors: {},
                 loading: false
             }
@@ -60,6 +60,15 @@ export default (state=defaultState, action={}) => {
                 ...state,
                 loading: true,
                 answer: {}
+            }
+        }
+
+        case 'FETCH_ANSWER_FULFILLED': {
+            return {
+                ...state,
+                answer: action.payload.data,
+                errors: {},
+                loading: false
             }
         }
 
