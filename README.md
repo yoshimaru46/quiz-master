@@ -1,24 +1,38 @@
 # README
+This is Simple Quiz App with Rails & React
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## DEMO
 
-Things you may want to cover:
+[DEMO](/DEMO.md)
 
-* Ruby version
+## Versions
 
-* System dependencies
+- ruby: 2.5.0-rc1
+- rails: 5.1.6 
 
-* Configuration
+## Setup
+1. Get the code.
 
-* Database creation
+    `% git clone git@github.com:yshr446/quiz-master.git`
 
-* Database initialization
+2. Setup your environment.
 
-* How to run the test suite
+    `% bin/setup`
 
-* Services (job queues, cache servers, search engines, etc.)
+2. Install modules
 
-* Deployment instructions
+    `% npm install`
 
-* ...
+3. Start Foreman.
+
+    `% foreman start`
+
+4. Verify that the app is up and running.
+
+     `% open http://localhost:3030`
+
+## Todo
+
+1. Add Test for Client App
+1. Fix eslint errors on Client App
+1. Fix 「Start Answer」page not to show some question before refresh
